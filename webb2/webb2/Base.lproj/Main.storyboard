@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="webb2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckQ-dH-aIW">
+                                <rect key="frame" x="0.0" y="79" width="393" height="739"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wpo-tj-1Dp">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="79"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="713-5D-Obt">
+                                        <rect key="frame" x="8" y="42" width="30" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="s3K-40-3Tg"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system"/>
+                                        <connections>
+                                            <action selector="goBack" destination="BYZ-38-t0r" eventType="touchUpInside" id="ofu-fI-1Ep"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhH-PS-Zom">
+                                        <rect key="frame" x="345.33333333333331" y="42" width="39.666666666666686" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="M0g-PD-laR"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.forward" catalog="system"/>
+                                        <connections>
+                                            <action selector="goForward" destination="BYZ-38-t0r" eventType="touchUpInside" id="aRf-Qe-riD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mT-Yk-GfT">
+                                        <rect key="frame" x="179" y="45" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="qIa-y1-Qh4"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise" catalog="system"/>
+                                        <connections>
+                                            <action selector="reload" destination="BYZ-38-t0r" eventType="touchUpInside" id="udp-oN-PRI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="AhH-PS-Zom" firstAttribute="top" secondItem="wpo-tj-1Dp" secondAttribute="top" constant="42" id="H04-jw-84e"/>
+                                    <constraint firstAttribute="trailing" secondItem="AhH-PS-Zom" secondAttribute="trailing" constant="8" id="MHU-dK-iGo"/>
+                                    <constraint firstAttribute="bottom" secondItem="AhH-PS-Zom" secondAttribute="bottom" constant="3" id="R71-zf-9Jb"/>
+                                    <constraint firstAttribute="bottom" secondItem="713-5D-Obt" secondAttribute="bottom" constant="3" id="Tpv-EB-rxY"/>
+                                    <constraint firstItem="2mT-Yk-GfT" firstAttribute="centerX" secondItem="wpo-tj-1Dp" secondAttribute="centerX" id="enD-FE-TCl"/>
+                                    <constraint firstItem="2mT-Yk-GfT" firstAttribute="top" secondItem="wpo-tj-1Dp" secondAttribute="top" constant="45" id="epa-pA-jMh"/>
+                                    <constraint firstItem="713-5D-Obt" firstAttribute="leading" secondItem="wpo-tj-1Dp" secondAttribute="leading" constant="8" id="mmE-ym-alv"/>
+                                    <constraint firstItem="713-5D-Obt" firstAttribute="top" secondItem="wpo-tj-1Dp" secondAttribute="top" constant="42" id="mqz-eb-3fG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ckQ-dH-aIW" secondAttribute="trailing" id="8T9-Li-9PN"/>
+                            <constraint firstItem="wpo-tj-1Dp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HGI-a6-n7y"/>
+                            <constraint firstItem="ckQ-dH-aIW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Kgb-VV-efi"/>
+                            <constraint firstItem="ckQ-dH-aIW" firstAttribute="top" secondItem="wpo-tj-1Dp" secondAttribute="bottom" id="WOs-hf-ryh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ckQ-dH-aIW" secondAttribute="bottom" id="d7d-uX-iuQ"/>
+                            <constraint firstAttribute="trailing" secondItem="wpo-tj-1Dp" secondAttribute="trailing" id="jFf-cG-BI4"/>
+                            <constraint firstItem="wpo-tj-1Dp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="q5a-ef-Sy3"/>
+                            <constraint firstItem="ckQ-dH-aIW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vLr-td-ghD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="ckQ-dH-aIW" id="aJR-Vi-Hyk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57.251908396946561" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <image name="chevron.forward" catalog="system" width="97" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
